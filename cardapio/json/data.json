@@ -1,0 +1,4 @@
+[
+	{"id":1,"codigo":12, "nome":"nome do item" , "descricao":"descrição do item" , "preco":"2.80", "cor":"default", "subitens":[]},
+	{"id":2,"codigo":21, "nome":"nome do item2", "descricao":"descrição do item2", "preco":"3.80", "cor":"default", "subitens":[]}
+]

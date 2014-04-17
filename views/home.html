@@ -1,0 +1,74 @@
+<nav class="navbar navbar-default" role="navigation" ng-show="true" style="margin-bottom: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding-top: 2px;"><img src="img/logo.png" width="70px"></a>
+
+            <input ng-model="login.email" placeholder="usuário" type="text"/>
+            <input ng-model="login.senha"   placeholder="senha" type="text"/>
+            <a href="#" ng-click="actionLogin()">Login </a>
+            <p>{{login.mensagem}}</p>
+        </div>
+    </div>
+</nav>
+
+<div id="viewhome" style="background: url('img/fundo_mesa.jpg') no-repeat transparent;height: 704px;width:100%; position: center;">
+
+    <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0); width: 1300px;">
+
+        <div id="homeprincipal" style=" padding: 20px; text-align: center; color:#ffffff;
+                                        height: 570px; width: 600px; float: left;
+                                        border-right: 1px solid white; border-color: #ffffff; background-color:rgba(107,66,38, 0.8);
+                                        box-shadow: inset 0 0 8px  rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.3);" >
+            <img src="img/logo.png" width="130">
+            <hr>
+            <p><b>{{config.pageTittle}}Receba café da manhã em casa e aproveite o seu dia. <br> Entregas agendadas para condomínos residenciais.</b></p>
+            <hr>
+            <br />
+            <table align="center" id="tabelapassos">
+                <tr>
+                    <td><b>1</b><br/> <img src="img/passo01.png" /></td>
+                <td>&nbsp;</td>
+                    <td><b>2</b><br/><img src="img/passo02.png" /></td>
+                <td>&nbsp;</td>
+                    <td><b>3</b><br/><img src="img/passo03.png" /></td>
+                </tr>
+                <tr><td><br /></td></tr>
+                <tr>
+                <td><strong>Coloque os produtos<br />em seu carrinho</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>Aguarde a entrega</strong></td>
+                <td>&nbsp;</td>
+                <td><strong>Carpe diem!</strong></td>
+                </tr>
+            </table>
+            <div id="footer" style="padding:20px; font-size: 1px;">
+            <p align="center"><button class="button-1" value="enviar">Saiba mais!</button></p>
+            </div>
+        </div>
+
+        <div id="homecadastro" style="  padding: 20px;color: #ffffff; font-size: 28px; text-shadow:#999999 0 1px 3px;
+                                        height: 570px;width: 600px; float: left;text-align: center;
+                                         background-color:rgba(92, 64, 51, 0.8)">
+             Cadastre-se aqui e lhe avisaremos sobre o lançamento
+            <br><br>
+            <form action="" method="post" style="text-align: right">
+                Nome: <input ng-model="cadastro.nome">
+                <br>
+                Email: <input ng-model="cadastro.email">
+                <br>
+                Cidade:
+                <select ng-model="cadastro.cidade" style=" width: 260px;">
+                    <option value="Natal/RN" >Natal/RN</option>
+                    <option value="Parnamirim/RN">Parnamirim/RN</option>
+                </select>
+                <br>
+                Seu condomínio: <input ng-model="cadastro.condominio">
+                <br>
+                Comentários e sugestões:<br> <textarea ng-model="cadastro.comentario"></textarea>
+                <br>
+                <button class="button-1" value="enviar" ng-click="actionSaveCadastro()">enviar</button>
+            </form>
+        </div>
+    </div>
+
+</div>

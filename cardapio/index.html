@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+	<meta charset="utf-8"/>
+	<title>Cardápio App</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</head>
+<body onload="resize()" onresize="resize()">
+	<div>
+		<div id="itemController" ng-controller="ItemController">
+			<!--Campos de preenchimento-->
+			<div id="left">
+			<h2 style="text-align:center;">Menu</h2>
+			<hr/>
+			<div id="campos">
+							<input type="hidden" ng-model="novoitem.id"/>
+			Código:    <br/><input type="text"   ng-model="novoitem.codigo"    ng-keyup="salvar()"/><br />
+			Nome:      <br/><input type="text"   ng-model="novoitem.nome"      ng-keyup="salvar()"/><br />
+			Descrição: <br/><textarea            ng-model="novoitem.descricao" ng-keyup="salvar()"/></textarea><br />
+			Preço (R$):<br/><input type="text"   ng-model="novoitem.preco"     ng-keyup="salvar()"/><br />
+			</div>
+			<!--Menu-->
+			<div id="menu">
+			<button class="button-1" ng-click="acao = 'adicionar';salvar()" ng-show="acao == ''">adicionar novo</button>
+			<button class="button-1" ng-click="subirItem(novoitem.id)"      ng-show="acao == 'editar'" >&uarr; subir item</button>
+			<button class="button-1" ng-click="descerItem(novoitem.id)"     ng-show="acao == 'editar'" >&darr; descer item</button>
+			<br/>
+			<button class="button-1" ng-click="excluirItem(novoitem.id)"    ng-show="acao == 'editar'" >excluir</button>
+			<button class="button-1" ng-click="limpar()"                    ng-show="acao != ''">feito</button>
+			<button class="button-1" ng-click="adicionarSubItem()"          ng-show="acao != ''">adicionar <br/> subitem</button>
+			</div><!--fim div#menu-->
+			</div><!--fim div#left-->
+			<!--Cardapio-->
+			<div id="right">
+			<h2 style="text-align: center;">Cardápio</h2>
+			<hr/>
+			<div ng-repeat="item in itens">
+				<div  class="div-item" ng-click="acao = 'editar';preencherCampos();itemClicado($index)" item-id="{{item.id}}" ng-class="{ 'div-item-ativo': $index == indiceItemSelecionado }">
+					<h3 class="h3-nome"><span ng-show="item.codigo">{{item.codigo}}. </span>{{item.nome}}</h3>
+					<p class="p-itempreco" ng-show="item.preco"><b>{{item.preco | currency:"R$ "}}</b></p>
+					<p>{{item.descricao}}</p>
+					
+					<div class="subitens" ng-repeat="subitem in item.subitens">
+						
+					</div><!--fim div-subitens-->
+				</div><!--fim div-item-->
+			</div><!--fim item-->
+			</div><!--fim div#right-->
+		</div><!--fim ItemController-->
+	</div><!--fim ng-app -->
+</body>
+</html> 

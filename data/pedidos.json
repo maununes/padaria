@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "cliente_id": 2,
+        "condominio_id": 2,
+        "valor": 20.50,
+        "datahora_pedido": "21/03/2014 18:00",
+        "datahora_entrega": "22/03/2014 06:00",
+        "itens":[],
+        "observacao": "o dinheiro está na porta",
+        "tipo": "individual",
+        "status": "atendido"
+    },
+    {
+        "id": 2,
+        "cliente_id": 2,
+        "condominio_id": 2,
+        "valor": 20.50,
+        "datahora_pedido": "23/03/2014 18:00",
+        "datahora_entrega": "24/03/2014 06:00",
+        "itens":[],
+        "observacao": "o dinheiro está na porta",
+        "tipo": "coletivo",
+        "status": "não atendido"
+    },
+    {
+        "id": 3,
+        "cliente_id": 2,
+        "condominio_id": 2,
+        "valor": 20.50,
+        "datahora_pedido": "01/04/2014 18:00",
+        "datahora_entrega": "02/04/2014 06:00",
+        "itens":[],
+        "observacao": "o dinheiro está na porta",
+        "tipo": "coletivo",
+        "status": "pendente"
+    }
+]

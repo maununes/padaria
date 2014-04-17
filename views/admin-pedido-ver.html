@@ -1,0 +1,52 @@
+<div class="panel panel-default" ng-show="action=='ver'">
+    <div class="panel-heading">
+        <b>Ver pedido #{{pedido.id}}</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/admin/pedido/editar/{{id}}" ng-click="">editar</a>
+            <a class="btn btn-default" href="#/admin/pedido/listar" ng-click="">listar</a>
+            <a class="btn btn-default" href="" ng-click="">deletar</a>
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <td>{{label.pedido.id}}:</td>
+            <td>{{pedido.id}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.cliente_id}}:</td>
+            <td>{{pedido.cliente_id}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.condominio_id}}:</td>
+            <td>{{pedido.condominio_id}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.valor}}:</td>
+            <td>{{pedido.valor}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.datahora_pedido}}:</td>
+            <td>{{pedido.datahora_pedido}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.datahora_entrega}}:</td>
+            <td>{{pedido.datahora_entrega}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.itens}}:</td>
+            <td><a href="">itens</a></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.observacao}}:</td>
+            <td>{{pedido.observacao}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.tipo}}:</td>
+            <td>{{pedido.tipo}}</td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.status}}:</td>
+            <td>{{pedido.status}}</td>
+        </tr>
+    </table>
+</div>
