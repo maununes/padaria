@@ -10,6 +10,7 @@ appControllers.controller('AdminController', ['$scope', '$routeParams', '$http',
     $scope.actionListarPedidos = function(id){
         var urlPedidos = 'data/pedidos.json?';
         $http.get(urlPedidos)
+            //encontrou
             .success(function(data) {
                 if(id){
                     $scope.pedido = findObjectInArray(data, "id", id);
@@ -25,13 +26,17 @@ appControllers.controller('AdminController', ['$scope', '$routeParams', '$http',
     }//fim actionListarPedidos
 
     //lista clientes
-    $scope.actionListarClientes = function(){
+    $scope.actionListarClientes = function(id){
         //get clientes e padarias
         var urlUsers = 'data/users.json?';
         $http.get(urlUsers)
-            //encontrou usuario
+            //encontrou
             .success(function(data) {
-                $scope.clientes = findListInArray(data, "tipo", "cliente");
+                if(id){
+                    $scope.cliente = findObjectInArray(data, "id", id);
+                }else{
+                    $scope.clientes = findListInArray(data, "tipo", "cliente");
+                }
             })
             //houve erro na requisição ao servidor
             .error(function(data) {
@@ -45,7 +50,7 @@ appControllers.controller('AdminController', ['$scope', '$routeParams', '$http',
         //get clientes e padarias
         var urlUsers = 'data/users.json?';
         $http.get(urlUsers)
-            //encontrou usuario
+            //encontrou
             .success(function(data) {
                 $scope.padarias = findListInArray(data, "tipo", "padaria");
             })
@@ -60,9 +65,24 @@ appControllers.controller('AdminController', ['$scope', '$routeParams', '$http',
         //get condominios
         var urlCond = 'data/condominios.json?';
         $http.get(urlCond)
-            //encontrou usuario
+            //encontrou
             .success(function(data) {
                 $scope.condominios = data;
+            })
+            //houve erro na requisição ao servidor
+            .error(function(data) {
+                $scope.mensagem = "houve um erro na requisição do servidor";
+            });
+    }//fim actionListarCondominios
+
+    //lista cardapios
+    $scope.actionListarCardapios = function(){
+        //get cardapios
+        var urlCond = 'data/cardapios.json?';
+        $http.get(urlCond)
+            //encontrou
+            .success(function(data) {
+                $scope.cardapios = data;
             })
             //houve erro na requisição ao servidor
             .error(function(data) {
@@ -87,6 +107,9 @@ appControllers.controller('AdminController', ['$scope', '$routeParams', '$http',
             break;
         case "condominio":
             $scope.actionListarCondominios($routeParams.id);
+            break;
+        case "cardapio":
+            $scope.actionListarCardapios($routeParams.id);
             break;
     }
     //

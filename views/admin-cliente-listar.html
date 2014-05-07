@@ -1,0 +1,29 @@
+<div class="panel panel-default" ng-show="action=='listar'">
+    <div class="panel-heading">
+        <b>Listar clientes</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/admin/cliente/cadastrar">cadastrar</a>
+        </div>
+    </div>
+    <table class="table">
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Telefone</th>
+			<th>Email</th>
+			<th>Ação</th>
+		</tr>
+		<tr ng-repeat="cliente in clientes">
+			<td>{{cliente.id}}</td>
+			<td>{{cliente.nome}}</td>
+			<td>{{cliente.telefone}}</td>
+			<td>{{cliente.email}}</td>
+			<td>
+				<div class="btn-group">
+					<a class="btn btn-default" href="#/admin/cliente/ver/{{cliente.id}}">ver</a>
+					<a class="btn btn-default" >deletar</a>
+				</div>
+			</td>
+		</tr>
+    </table>
+</div>

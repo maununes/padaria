@@ -1,0 +1,43 @@
+<div class="panel panel-default" ng-show="action=='editar'">
+    <div class="panel-heading">
+        <b>Cliente #{{cliente.id}}</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/admin/cliente/ver/{{id}}" ng-click="">ver</a>
+            <a class="btn btn-default" href="#/admin/cliente/listar" ng-click="">listar</a>
+            <a class="btn btn-default" href="" ng-click="">deletar</a>
+        </div>
+    </div>
+    <table class="table1">
+        <tr>
+            <td>{{label.cliente.id}}:</td>
+            <td><input type="text" value="{{cliente.id}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.nome}}:</td>
+            <td><input type="text" value="{{cliente.nome}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.email}}:</td>
+            <td><input type="text" value="{{cliente.email}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.telefone}}:</td>
+            <td><input type="text" value="{{cliente.telefone}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.condominio_id}}:</td>
+            <td><input type="text" value="{{cliente.condominio_id}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.complemento}}:</td>
+            <td><input type="text" value="{{cliente.complemento}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.tipo}}:</td>
+            <td><input type="text" value="{{cliente.tipo}}" /></td>
+        </tr>
+    </table>
+    <div class="panel-footer">
+        <a class="btn btn-default" href="" ng-click="">salvar</a>
+    </div>
+</div>

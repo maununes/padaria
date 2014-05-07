@@ -35,8 +35,8 @@
     <div class="panel-heading">
         <b>Clientes</b>
         <div class="btn-group">
-            <button class="btn btn-default" type="button" ng-click="actionListarClientes();showListaCliente=!showListaCliente">listar</button>
-            <button class="btn btn-default" type="button">cadastrar</button>
+            <a class="btn btn-default" href="" type="button" ng-click="actionListarClientes();showListaCliente=!showListaCliente">listar</a>
+            <a class="btn btn-default" href="#/admin/cliente/cadastrar">cadastrar</a>
         </div>
     </div>
         <table class="table" ng-show="showListaCliente">
@@ -54,8 +54,8 @@
                 <td>{{cliente.email}}</td>
                 <td>
                     <div class="btn-group">
-                        <button class="btn btn-default" type="button">ver</button>
-                        <button class="btn btn-default" type="button">deletar</button>
+                        <a class="btn btn-default" href="#/admin/cliente/ver/{{cliente.id}}">ver</a>
+                        <a class="btn btn-default" >deletar</a>
                     </div>
                 </td>
             </tr>
@@ -66,8 +66,8 @@
     <div class="panel-heading">
         <b>Padarias</b>
         <div class="btn-group">
-            <button class="btn btn-default" type="button" ng-click="actionListarPadarias();showListaPadaria=!showListaPadaria">listar</button>
-            <button class="btn btn-default" type="button">cadastrar</button>
+            <a href="" class="btn btn-default" type="button" ng-click="actionListarPadarias();showListaPadaria=!showListaPadaria">listar</a>
+            <a class="btn btn-default" href="#/admin/padaria/cadastrar">cadastrar</a>
         </div>
     </div>
         <table class="table" ng-show="showListaPadaria">
@@ -85,8 +85,8 @@
                 <td>{{padaria.email}}</td>
                 <td>
                     <div class="btn-group">
-                        <button class="btn btn-default" type="button">ver</button>
-                        <button class="btn btn-default" type="button">deletar</button>
+                        <a class="btn btn-default" href="#/admin/padaria/ver/{{padaria.id}}">ver</a>
+                        <a class="btn btn-default" >deletar</a>
                     </div>
                 </td>
             </tr>
@@ -97,8 +97,8 @@
     <div class="panel-heading">
         <b>Condomínios</b>
         <div class="btn-group">
-            <button class="btn btn-default" type="button" ng-click="actionListarCondominios();showListaCondominio=!showListaCondominio">listar</button>
-            <button class="btn btn-default" type="button">cadastrar</button>
+            <a href="" class="btn btn-default" type="button" ng-click="actionListarCondominios();showListaCondominio=!showListaCondominio">listar</a>
+            <a class="btn btn-default" href="#/admin/condominio/cadastrar">cadastrar</a>
         </div>
     </div>
         <table class="table" ng-show="showListaCondominio">
@@ -114,10 +114,39 @@
                 <td>{{condominio.logradouro}} , {{condominio.cidade}}/{{condominio.estado}}</td>
                 <td>
                     <div class="btn-group">
-                        <button class="btn btn-default" type="button">editar</button>
-                        <button class="btn btn-default" type="button">deletar</button>
+                        <a class="btn btn-default" href="#/admin/condominio/ver/{{condominio.id}}">ver</a>
+                        <a class="btn btn-default" >deletar</a>
                     </div>
                 </td>
             </tr>
         </table>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Cardápios</b>
+        <div class="btn-group">
+            <a href="" class="btn btn-default" type="button" ng-click="actionListarCardapios();showListaCardapio=!showListaCardapio">listar</a>
+            <a class="btn btn-default" href="#/admin/cliente/cadastrar">cadastrar</a>
+        </div>
+    </div>
+    <table class="table" ng-show="showListaCardapio">
+        <tr>
+            <th>Id</th>
+            <th>Id Padaria</th>
+            <th>Itens</th>
+            <th>Ação</th>
+        </tr>
+        <tr ng-repeat="cardapio in cardapios">
+            <td>{{cardapio.id}}</td>
+            <td>{{cardapio.padaria_id}}</td>
+            <td>{{cardapio.itens.length}}</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="#/admin/cardapio/ver/{{cardapio.id}}">ver</a>
+                    <a class="btn btn-default" >deletar</a>
+                </div>
+            </td>
+        </tr>
+    </table>
 </div>

@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "nome": "Admin",
+        "email": "admin@admin.com"  ,
+        "senha": "admin",
+        "telefone": "84 9999 9999",
+        "condominio_id": "",
+        "complemento": "",
+        "tipo": "admin"
+    },
+    {
+        "id": 2,
+        "nome": "Usuario1",
+        "email": "user1@user.com"  ,
+        "senha": "user1",
+        "telefone": "84 9999 9999",
+        "condominio_id": "",
+        "complemento": "",
+        "tipo": "cliente"
+    },
+    {
+        "id": 3,
+        "nome": "Usuario2",
+        "email": "user2@user.com"  ,
+        "senha": "user1",
+        "telefone": "84 9999 9999",
+        "condominio_id": "",
+        "complemento": "",
+        "tipo": "cliente"
+    },
+    {
+        "id": 4,
+        "nome": "Padaria1",
+        "email": "padaria1@padaria.com"  ,
+        "senha": "padaria1",
+        "telefone": "84 9999 9999",
+        "condominio_id": "",
+        "complemento": "",
+        "tipo": "padaria"
+    },
+    {
+        "id": 5,
+        "nome": "Padaria2",
+        "email": "padaria2@padaria.com"  ,
+        "senha": "padaria2",
+        "telefone": "84 9999 9999",
+        "condominio_id": "",
+        "complemento": "",
+        "tipo": "padaria"
+    }
+]

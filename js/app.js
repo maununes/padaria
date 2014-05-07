@@ -36,24 +36,34 @@ app.config(['$routeProvider',
 
 var label = {
     "pedido": {
-        "id":              "Código",
-        "cliente_id":      "Código do cliente",
-        "condominio_id":   "Código do condomínio",
-        "valor":           "Valor (R$)",
-        "datahora_pedido": "Hora do pedido",
-        "datahora_entrega":"Hora da entrega",
-        "itens":           "Itens",
-        "observacao":      "Observação do cliente",
-        "tipo":            "Tipo",
-        "status":          "Status"
+        "id":               "Código",
+        "cliente_id":       "Código do cliente",
+        "condominio_id":    "Código do condomínio",
+        "valor":            "Valor (R$)",
+        "datahora_pedido":  "Hora do pedido",
+        "datahora_entrega": "Hora da entrega",
+        "itens":            "Itens",
+        "observacao":       "Observação do cliente",
+        "tipo":             "Tipo",
+        "status":           "Status"
     },
     "cliente":{
-
+        "id":            "Código",
+        "nome":          "Nome",
+        "email":         "Email"  ,
+        "senha":         "Senha",
+        "telefone":      "Telefone",
+        "condominio_id": "Código do condomínio",
+        "complemento":   "Complemento",
+        "tipo":          "Tipo"
     },
     "padaria":{
 
     },
     "condominio":{
+
+    },
+    "cardapio":{
 
     }
 };
