@@ -1,0 +1,55 @@
+<div class="panel panel-default" ng-show="action=='editar'">
+    <div class="panel-heading">
+        <b>Pedido #{{pedido.id}}</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/padaria/pedido/ver/{{id}}" ng-click="">ver</a>
+            <a class="btn btn-default" href="#/padaria/pedido/listar" ng-click="">listar</a>
+            <a class="btn btn-default" href="" ng-click="">deletar</a>
+        </div>
+    </div>
+    <table class="table1">
+        <tr>
+            <td>{{label.pedido.id}}:</td>
+            <td><input type="text" value="{{pedido.id}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.cliente_id}}:</td>
+            <td><input type="text" value="{{pedido.cliente_id}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.condominio_id}}:</td>
+            <td><input type="text" value="{{pedido.condominio_id}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.valor}}:</td>
+            <td><input type="text" value="{{pedido.valor}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.datahora_pedido}}:</td>
+            <td><input type="text" value="{{pedido.datahora_pedido}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.datahora_entrega}}:</td>
+            <td><input type="text" value="{{pedido.datahora_entrega}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.itens}}:</td>
+            <td><a href="">itens</a></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.observacao}}:</td>
+            <td><textarea>{{pedido.observacao}}</textarea></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.tipo}}:</td>
+            <td><input type="text" value="{{pedido.tipo}}" /></td>
+        </tr>
+        <tr>
+            <td>{{label.pedido.status}}:</td>
+            <td><input type="text" value="{{pedido.status}}" /></td>
+        </tr>
+    </table>
+    <div class="panel-footer">
+        <a class="btn btn-default" href="" ng-click="">salvar</a>
+    </div>
+</div>

@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index(nome: String)
+GET     /user/:id                   controllers.Application.user(id: Long)
 #GET   /clients/:id          controllers.Clients.show(id: Long)
 
 # Map static resources from the /public folder to the /assets URL path

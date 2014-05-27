@@ -13,6 +13,7 @@ app.config(['$routeProvider',
                 templateUrl: 'views/home.html',
                 controller: 'HomeController'
             }).
+            //modulo admin
             when('/admin/:controller', {
                 templateUrl: 'views/admin.html',
                 controller: 'AdminController'
@@ -25,6 +26,20 @@ app.config(['$routeProvider',
                 templateUrl: 'views/admin.html',
                 controller: 'AdminController'
             }).
+            //modulo padaria
+            when('/padaria/:controller', {
+                templateUrl: 'views/padaria.html',
+                controller: 'PadariaController'
+            }).
+            when('/padaria/:controller/:action', {
+                templateUrl: 'views/padaria.html',
+                controller: 'PadariaController'
+            }).
+            when('/padaria/:controller/:action/:id', {
+                templateUrl: 'views/padaria.html',
+                controller: 'PadariaController'
+            }).
+            //erro ou 404
             when('/error', {
                 templateUrl: 'views/error.html'
             }).

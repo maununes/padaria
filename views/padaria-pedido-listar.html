@@ -1,0 +1,31 @@
+<div class="panel panel-default" ng-show="action=='listar'">
+    <div class="panel-heading">
+        <b>Listar pedidos</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/padaria/pedido/cadastrar">cadastrar</a>
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Condomínio</th>
+            <th>Valor</th>
+            <th>Hora entrega</th>
+            <th>Status</th>
+            <th>Ação</th>
+        </tr>
+        <tr ng-repeat="pedido in pedidos">
+            <td>{{pedido.id}}</td>
+            <td>{{pedido.condominio_id}}</td>
+            <td>{{pedido.valor}}</td>
+            <td>{{pedido.datahora_entrega}}</td>
+            <td>{{pedido.status}}</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="#/padaria/pedido/ver/{{pedido.id}}">ver</a>
+                    <a class="btn btn-default" >deletar</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

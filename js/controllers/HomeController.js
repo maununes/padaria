@@ -9,8 +9,8 @@ var cadastro = {
 }
 
 var login = {
-    email: "admin@admin.com",
-    senha: "admin",
+    email: "padaria1@padaria.com",
+    senha: "padaria1",
     data_hora: null,
     mensagem: null
 }
@@ -48,6 +48,7 @@ appControllers.controller('HomeController', ['$scope', '$routeParams', '$http', 
                 usuario = findObjectInArray(data, "email", login.email);
                 //testa match de senhas, se der errado redireciona
                 if(usuario.senha == login.senha){
+                    console.log(usuario.login);
                     //salva local
                     setData("usuario",JSON.stringify(usuario));
                     //redireciona para o controlador certo

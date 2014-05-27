@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  
+  <head data-gwd-animation-mode="proMode">
+    <meta name="generator" content="Google Web Designer 1.0.6.0428">
+    <meta name="template" content="Expandable 1.0.5">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+      }
+      .gwd-page-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .gwd-page-content {
+        background-color: transparent;
+        -webkit-transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        -webkit-transform-style: preserve-3d;
+        position: absolute;
+      }
+      .gwd-page-wrapper {
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        -webkit-transform: translateZ(0px);
+      }
+      .banner {
+        width: 300px;
+        height: 250px;
+      }
+      .expanded {
+        width: 600px;
+        height: 600px;
+      }
+      #expand-button {
+        position: absolute;
+        width: 300px;
+        height: 250px;
+        left: 0px;
+        top: 0px;
+      }
+      #close-button {
+        position: absolute;
+        width: 120px;
+        height: 48px;
+        left: 355px;
+        top: 3px;
+        background-image: none;
+        background-color: rgba(153, 153, 153, 0.2);
+      }
+      .gwd-div-dgom {
+        position: absolute;
+        font-family: Arial;
+        font-size: 14px;
+        text-align: left;
+        color: rgb(0, 0, 0);
+        -webkit-transform-style: preserve-3d;
+        top: 46px;
+        left: 16px;
+        width: 269px;
+        height: 142px;
+        -webkit-transform: translate3d(-2px, 44px, 0px);
+      }
+      .gwd-div-lx6z {
+        text-align: center;
+      }
+      .gwd-span-ojsh {
+        background-color: transparent;
+      }
+      .gwd-gen-8ezz .gwd-gen-amdlgwdanimation {
+        -webkit-animation: gwd-gen-amdlgwdanimation_gwd-keyframes 6.2s linear 0s 1 forwards;
+      }
+      @-webkit-keyframes gwd-gen-amdlgwdanimation_gwd-keyframes {
+        0% {
+          top: 46px;
+          left: 16px;
+          width: 269px;
+          height: 142px;
+          -webkit-transform: translate3d(-2px, 22px, 0px);
+          -webkit-animation-timing-function: linear;
+        }
+        41.9355% {
+          top: 46px;
+          left: 16px;
+          width: 269px;
+          height: 142px;
+          -webkit-transform: translate3d(-2px, 44px, 0px);
+          -webkit-animation-timing-function: linear;
+        }
+        100% {
+          top: 46px;
+          left: 16px;
+          width: 269px;
+          height: 142px;
+          -webkit-transform: translate3d(-2px, 41px, 0px);
+          -webkit-animation-timing-function: linear;
+        }
+      }
+      .gwd-img-4zhq {
+        position: absolute;
+        -webkit-transform-style: preserve-3d;
+        top: 44px;
+        left: 171px;
+        width: 400px;
+        height: 267px;
+        -webkit-transform: translate3d(-217px, -62px, 0px);
+      }
+      .gwd-gen-8ezz .gwd-gen-ufodgwdanimation {
+        -webkit-animation: gwd-gen-ufodgwdanimation_gwd-keyframes 1.7s linear 6.2s 1 forwards;
+      }
+      @-webkit-keyframes gwd-gen-ufodgwdanimation_gwd-keyframes {
+        0% {
+          top: 44px;
+          left: 171px;
+          width: 400px;
+          height: 267px;
+          -webkit-transform: translate3d(-217px, -62px, 0px);
+          -webkit-animation-timing-function: linear;
+        }
+        100% {
+          top: 44px;
+          left: 171px;
+          width: 400px;
+          height: 267px;
+          -webkit-transform: translate3d(-217px, -62px, 0px);
+          -webkit-animation-timing-function: linear;
+        }
+      }
+    </style>
+    <script type="text/x-serialization" id="gwd-serialization">
+      {
+        "version": 1,
+        "content": {
+          "type": "rad.ad.RichMedia",
+          "properties": {
+            "environment": "@environment"
+          },
+          "children": [
+            "@bannerPg1",
+            "@expandPg1"
+          ]
+        },
+        "objects": {
+          "environment": {
+            "type": "rad.environment.DoubleClickStudio",
+            "properties": {
+              "isBanner": true
+            }
+          },
+          "bannerPg1": {
+            "type": "rad.ui.Page",
+            "decorates": true,
+            "events": [
+              {
+                "target": "@expandButton",
+                "type": "action",
+                "handler": {
+                  "target": "@rad.ad.RichMedia",
+                  "method": "goToPage",
+                  "parameters": [
+                    "@expandPg1",
+                    "none"
+                  ]
+                }
+              }
+            ],
+            "properties": {
+              "width": "300px",
+              "height": "250px",
+              "introAnimationSequence": "@introbannerPg1"
+            },
+            "children": [
+              "@expandButton"
+            ]
+          },
+          "expandPg1": {
+            "type": "rad.ui.Page",
+            "decorates": true,
+            "events": [
+              {
+                "target": "@closeButton",
+                "type": "action",
+                "handler": {
+                  "target": "@rad.ad.RichMedia",
+                  "method": "goToPage",
+                  "parameters": [
+                    "@bannerPg1",
+                    "none"
+                  ]
+                }
+              },
+              {
+                "target": "@closeButton",
+                "type": "action",
+                "handler": {
+                  "target": "@environment",
+                  "method": "reportManualClose",
+                  "parameters": []
+                }
+              }
+            ],
+            "properties": {
+              "width": "600px",
+              "height": "600px",
+              "expanded": true
+            },
+            "children": [
+              "@closeButton"
+            ]
+          },
+          "expandButton": {
+            "type": "rad.ui.TapArea",
+            "decorates": true
+          },
+          "closeButton": {
+            "type": "rad.ui.TapArea",
+            "decorates": true,
+            "properties": {
+              "name": "Close Button"
+            }
+          },
+          "introbannerPg1": {
+            "type": "rad.animation.CSSAnimation",
+            "properties": {
+              "cssClass": "gwd-gen-8ezz",
+              "elementCount": 2
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  
+  <body class="document-body">
+    <div class="gwd-page-container">
+      <div id="banner-pg1" class="gwd-page-wrapper banner" data-gwd-component-id="bannerPg1">
+        <div class="gwd-page-content banner">
+          <img src="images/cafedamanha.jpg" class="gwd-img-4zhq gwd-gen-ufodgwdanimation">
+          <div class="gwd-div-dgom gwd-gen-amdlgwdanimation">
+            <div class="gwd-div-lx6z"><span class="gwd-span-ojsh">Na vida precisamos sair da zona de conforto se quisermos conquistar nossos objetivos.</span>
+            </div>
+          </div>
+          <div id="expand-button" data-gwd-component="rad.ui.TapArea" data-gwd-component-id="expandButton" class=""></div>
+        </div>
+      </div>
+      <div id="expand-pg1" class="gwd-page-wrapper expanded" data-gwd-component-id="expandPg1">
+        <div class="gwd-page-content expanded">
+          <div id="close-button" data-gwd-component="rad.ui.TapArea" data-gwd-component-id="closeButton"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

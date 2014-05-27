@@ -1,0 +1,112 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Pedidos</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="" ng-click="actionListarPedidos();showListaPedido=!showListaPedido">listar</a>
+            <a class="btn btn-default" href="#/padaria/pedido/cadastrar">cadastrar</a>
+        </div>
+    </div>
+    <table class="table" ng-show="showListaPedido">
+        <tr>
+            <th>Id</th>
+            <th>Condomínio</th>
+            <th>Valor</th>
+            <th>Hora entrega</th>
+            <th>Status</th>
+            <th>Ação</th>
+        </tr>
+        <tr ng-repeat="pedido in pedidos">
+            <td>{{pedido.id}}</td>
+            <td>{{pedido.condominio_id}}</td>
+            <td>{{pedido.valor}}</td>
+            <td>{{pedido.datahora_entrega}}</td>
+            <td>{{pedido.status}}</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="#/padaria/pedido/ver/{{pedido.id}}">ver</a>
+                    <a class="btn btn-default" >editar status</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Clientes</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="" type="button" ng-click="actionListarClientes();showListaCliente=!showListaCliente">listar</a>
+            <a class="btn btn-default" href="#/padaria/cliente/cadastrar">cadastrar</a>
+        </div>
+    </div>
+        <table class="table" ng-show="showListaCliente">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Ação</th>
+            </tr>
+            <tr ng-repeat="cliente in clientes">
+                <td>{{cliente.id}}</td>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.telefone}}</td>
+                <td>{{cliente.email}}</td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-default" href="#/padaria/cliente/ver/{{cliente.id}}">ver</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Condomínios</b>
+        <div class="btn-group">
+            <a href="" class="btn btn-default" type="button" ng-click="actionListarCondominios();showListaCondominio=!showListaCondominio">listar</a>
+            <a class="btn btn-default" href="#/padaria/condominio/cadastrar">cadastrar</a>
+        </div>
+    </div>
+        <table class="table" ng-show="showListaCondominio">
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Ação</th>
+            </tr>
+            <tr ng-repeat="condominio in condominios">
+                <td>{{condominio.id}}</td>
+                <td>{{condominio.nome}}</td>
+                <td>{{condominio.logradouro}} , {{condominio.cidade}}/{{condominio.estado}}</td>
+                <td>
+                    <div class="btn-group">
+                        <a class="btn btn-default" href="#/padaria/condominio/ver/{{condominio.id}}">ver</a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Cardápio</b>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Itens</th>
+            <th>Ação</th>
+        </tr>
+        <tr ng-repeat="cardapio in cardapios">
+            <td>{{cardapio.id}}</td>
+            <td>{{cardapio.itens.length}}</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="cardapio">editar</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>
