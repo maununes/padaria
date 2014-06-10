@@ -1,4 +1,5 @@
 [
-	{"id":1,"codigo":12, "nome":"nome do item" , "descricao":"descrição do item" , "preco":"2.80", "cor":"default", "subitens":[]},
-	{"id":2,"codigo":21, "nome":"nome do item2", "descricao":"descrição do item2", "preco":"3.80", "cor":"default", "subitens":[]}
+	{"id":1,"codigo":12, "nome":"Pão" , "descricao":"Francês" , "preco":"0.80", "cor":"default", "subitens":[]},
+	{"id":2,"codigo":13, "nome":"Café", "descricao":"Sem açúcar", "preco":"1.50", "cor":"default", "subitens":[]},
+	{"id":3,"codigo":14, "nome":"Queijo", "descricao":"Mussarela, 100g", "preco":"1.00", "cor":"default", "subitens":[]}
 ]

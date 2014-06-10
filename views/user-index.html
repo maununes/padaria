@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <b>Pedidos</b>
+        <div class="btn-group">
+			<a class="btn btn-default" href="/padaria/cardapio#user">fazer pedido</a>
+            <a class="btn btn-default" href="" ng-click="actionListarPedidos();showListaPedido=!showListaPedido">meus pedidos</a>
+        </div>
+    </div>
+    <table class="table" ng-show="showListaPedido">
+        <tr>
+            <th>Id</th>
+            <th>Condomínio</th>
+            <th>Valor</th>
+            <th>Hora entrega</th>
+            <th>Status</th>
+            <th>Ação</th>
+        </tr>
+        <tr ng-repeat="pedido in pedidos">
+            <td>{{pedido.id}}</td>
+            <td>{{pedido.condominio_id}}</td>
+            <td>{{pedido.valor}}</td>
+            <td>{{pedido.datahora_entrega}}</td>
+            <td>{{pedido.status}}</td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-default" href="#/user/pedido/ver/{{pedido.id}}">ver</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

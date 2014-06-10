@@ -1,0 +1,40 @@
+<div class="panel panel-default" ng-show="action=='ver'">
+    <div class="panel-heading">
+        <b>Ver cliente #{{cliente.id}}</b>
+        <div class="btn-group">
+            <a class="btn btn-default" href="#/padaria/cliente/editar/{{id}}" ng-click="">editar</a>
+            <a class="btn btn-default" href="#/padaria/cliente/listar" ng-click="">listar</a>
+            <a class="btn btn-default" href="" ng-click="">deletar</a>
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <td>{{label.cliente.id}}:</td>
+            <td>{{cliente.id}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.nome}}:</td>
+            <td>{{cliente.nome}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.email}}:</td>
+            <td>{{cliente.email}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.telefone}}:</td>
+            <td>{{cliente.telefone}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.condominio_id}}:</td>
+            <td>{{cliente.condominio_id}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.complemento}}:</td>
+            <td>{{cliente.complemento}}</td>
+        </tr>
+        <tr>
+            <td>{{label.cliente.tipo}}:</td>
+            <td>{{cliente.tipo}}</td>
+        </tr>
+    </table>
+</div>

@@ -39,6 +39,19 @@ app.config(['$routeProvider',
                 templateUrl: 'views/padaria.html',
                 controller: 'PadariaController'
             }).
+            //modulo usuario
+            when('/user/:controller', {
+                templateUrl: 'views/user.html',
+                controller: 'UserController'
+            }).
+            when('/user/:controller/:action', {
+                templateUrl: 'views/user.html',
+                controller: 'UserController'
+            }).
+            when('/user/:controller/:action/:id', {
+                templateUrl: 'views/user.html',
+                controller: 'UserController'
+            }).
             //erro ou 404
             when('/error', {
                 templateUrl: 'views/error.html'

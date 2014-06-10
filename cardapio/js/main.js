@@ -1,9 +1,13 @@
 var host = "http://localhost/angular";
 
-
 //item controller
 function ItemController($scope, $http){
-	//
+	//contexto de ususario
+    $scope.hash = window.location.hash;
+    $scope.itensEscolhidos = [];
+    $scope.totalPedido = 0;
+    //fim contexto de usuario
+
 	$scope.itens = [];
 	//puxar dados do arquivo json
 	$http({method: 'GET', url: 'json/data.json'}).
@@ -118,6 +122,12 @@ function ItemController($scope, $http){
 		$scope.indiceItemSelecionado = $index;
 		//ir pro topo da tela
 		window.scrollTo(0,0);
+
+        //contexto de usuario
+        var clicado = getElementById($scope.itens, $index+1);
+        $scope.itensEscolhidos.push(clicado);
+        $scope.totalPedido = $scope.totalPedido +  parseFloat(clicado.preco);
+        console.log(clicado);
 	};
 	
 	//
@@ -128,6 +138,11 @@ function ItemController($scope, $http){
 	$scope.gerarSubItemId = function(idPai){
 		
 	}
+
+    //function ir para
+    $scope.goTo= function(href){
+        window.location.pathname = href;
+    }
 	
 }//fim itemcontroller
 

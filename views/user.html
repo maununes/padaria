@@ -1,0 +1,43 @@
+<nav class="navbar navbar-default" role="navigation" ng-show="true" style="margin-bottom: 0px;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="padding-top: 2px;"><img src="img/logo.png" width="70px"></a>
+            {{usuario.nome}}
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administrar<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#/padaria/pedido/listar">Listar pedidos</a></li>
+                    <li><a href="#/padaria/pedido/cadastrar">Cadastrar pedidos</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown">Minha conta<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="">Meus dados</a></li>
+                    <li><a href="" ng-click="actionSair()" >Alterar senha</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">sair</a></li>
+        </ul>
+    </div>
+</nav>
+<p>{{mensagem}}</p>
+
+<div class="panel panel-default">
+    <ol class="breadcrumb">
+        <li><a href="#/user/index">padaria</a></li>
+        <li><a href="#/user/{{controller}}/listar">{{controller}}</a></li>
+        <li ng-show="{{action}}"><a href="#/padaria/{{controller}}/{{action}}">{{action}}</a></li>
+        <li class="active" ng-show="{{id}}">{{id}}</li>
+    </ol>
+
+    <div class="panel-body">
+        <div ng-include src="template"> </div>
+    </div>
+    <div class="panel-footer">Caffé Diem - Todos os direitos reservados</div>
+</div>

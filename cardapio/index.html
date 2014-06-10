@@ -12,26 +12,45 @@
 		<div id="itemController" ng-controller="ItemController">
 			<!--Campos de preenchimento-->
 			<div id="left">
-			<h2 style="text-align:center;">Menu</h2>
-			<hr/>
-			<div id="campos">
-							<input type="hidden" ng-model="novoitem.id"/>
-			Código:    <br/><input type="text"   ng-model="novoitem.codigo"    ng-keyup="salvar()"/><br />
-			Nome:      <br/><input type="text"   ng-model="novoitem.nome"      ng-keyup="salvar()"/><br />
-			Descrição: <br/><textarea            ng-model="novoitem.descricao" ng-keyup="salvar()"/></textarea><br />
-			Preço (R$):<br/><input type="text"   ng-model="novoitem.preco"     ng-keyup="salvar()"/><br />
-			</div>
-			<!--Menu-->
-			<div id="menu">
-			<button class="button-1" ng-click="acao = 'adicionar';salvar()" ng-show="acao == ''">adicionar novo</button>
-			<button class="button-1" ng-click="subirItem(novoitem.id)"      ng-show="acao == 'editar'" >&uarr; subir item</button>
-			<button class="button-1" ng-click="descerItem(novoitem.id)"     ng-show="acao == 'editar'" >&darr; descer item</button>
-			<br/>
-			<button class="button-1" ng-click="excluirItem(novoitem.id)"    ng-show="acao == 'editar'" >excluir</button>
-			<button class="button-1" ng-click="limpar()"                    ng-show="acao != ''">feito</button>
-			<button class="button-1" ng-click="adicionarSubItem()"          ng-show="acao != ''">adicionar <br/> subitem</button>
-			</div><!--fim div#menu-->
+				<div ng-show="!hash">
+					<h2 style="text-align:center;">Menu</h2>
+					<hr/>
+					<div id="campos">
+									<input type="hidden" ng-model="novoitem.id"/>
+					Código:    <br/><input type="text"   ng-model="novoitem.codigo"    ng-keyup="salvar()"/><br />
+					Nome:      <br/><input type="text"   ng-model="novoitem.nome"      ng-keyup="salvar()"/><br />
+					Descrição: <br/><textarea            ng-model="novoitem.descricao" ng-keyup="salvar()"/></textarea><br />
+					Preço (R$):<br/><input type="text"   ng-model="novoitem.preco"     ng-keyup="salvar()"/><br />
+					</div>
+					<!--Menu-->
+					<div id="menu">
+					<button class="button-1" ng-click="acao = 'adicionar';salvar()" ng-show="acao == ''">adicionar novo</button>
+					<button class="button-1" ng-click="subirItem(novoitem.id)"      ng-show="acao == 'editar'" >&uarr; subir item</button>
+					<button class="button-1" ng-click="descerItem(novoitem.id)"     ng-show="acao == 'editar'" >&darr; descer item</button>
+					<br/>
+					<button class="button-1" ng-click="excluirItem(novoitem.id)"    ng-show="acao == 'editar'" >excluir</button>
+					<button class="button-1" ng-click="limpar()"                    ng-show="acao != ''">feito</button>
+					<button class="button-1" ng-click="adicionarSubItem()"          ng-show="acao != ''">adicionar <br/> subitem</button>
+					</div><!--fim div#menu-->
+				</div>
+				<div ng-show="hash">
+					<h2 style="text-align:center;">Meu carrinho</h2>
+					<hr/>
+					<div >
+						<ul ng-repeat="item in itensEscolhidos">
+							<li>{{item.codigo}}. {{item.nome}}</li>
+						</ul>
+					</div>
+					<div style="text-align:center;">
+						<h3>Total: R$ {{totalPedido}}</h3> 
+						<br/>
+						<button class="button-1" ng-click="goTo('padaria/#/user/index')" >realizar pedido</button>
+						<button class="button-1" ng-click="totalPedido=0;itensEscolhidos=[]" >limpar</button>
+					
+					</div>
+				</div>
 			</div><!--fim div#left-->
+			
 			<!--Cardapio-->
 			<div id="right">
 			<h2 style="text-align: center;">Cardápio</h2>
